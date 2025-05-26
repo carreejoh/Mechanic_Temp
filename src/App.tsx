@@ -177,7 +177,7 @@ function App() {
       </section>
 
       <footer className="px-8 py-6 h-16 bg-[#272627] text-neutral-content text-sm text-center">
-        &copy; {new Date().getFullYear()} AMR Auto Repair. All rights reserved.
+        &copy; {new Date().getFullYear()} {clientConfig.name}. All rights reserved.
       </footer>
     </main>
   );
