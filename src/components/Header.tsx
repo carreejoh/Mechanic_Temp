@@ -21,9 +21,6 @@ const Header: React.FC = () => {
         <Link to="/" className="">
           <img src={clientConfig.logo}/>
         </Link>
-
-        <h2 className="text-3xl font-bold tracking-wide text-primary italic">AMR</h2>
-
         {/* Desktop nav */}
         <nav className="hidden md:flex space-x-4">
           {links.map(({ name, to, key }) => (
