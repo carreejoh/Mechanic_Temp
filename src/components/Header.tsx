@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
+import { clientConfig } from "../client-config";
+
 const Header: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,10 +16,10 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="w-full fixed top-0 z-50 bg-[#272627] shadow-sm border-b-[2px] border-yellow-400">
+    <header className="w-full fixed top-0 z-50 bg-[#272627] shadow-sm border-b-[2px] border-primary">
       <div className="h-24 flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-48">
-        <Link to="/" className="text-3xl font-bold tracking-wide text-yellow-400 italic">
-          AMR Auto Repair
+        <Link to="/" className="text-3xl font-bold tracking-wide text-primary italic">
+          <img src={clientConfig.logo}/>
         </Link>
 
         {/* Desktop nav */}
@@ -29,7 +31,7 @@ const Header: React.FC = () => {
               className="tab"
               onClick={() => setSelectedLocation(key)}
             >
-              <p className={`text-lg font-medium ${selectedLocation === key ? "text-yellow-400" : "text-base-100"}`}>
+              <p className={`text-lg font-medium ${selectedLocation === key ? "text-primary" : "text-base-100"}`}>
                 {name}
               </p>
             </Link>
@@ -38,7 +40,7 @@ const Header: React.FC = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 rounded-md bg-yellow-400 focus:outline-none focus:ring"
+          className="md:hidden p-2 rounded-md bg-primary focus:outline-none focus:ring"
           onClick={() => setMobileOpen((o) => !o)}
           aria-label="Toggle menu"
         >
@@ -60,7 +62,7 @@ const Header: React.FC = () => {
                   setMobileOpen(false);
                 }}
               >
-                <p className={`text-lg font-medium ${selectedLocation === key ? "text-yellow-400" : "text-base-100"}`}>
+                <p className={`text-lg font-medium ${selectedLocation === key ? "text-primary" : "text-base-100"}`}>
                   {name}
                 </p>
               </Link>
