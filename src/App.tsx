@@ -53,13 +53,13 @@ function App() {
       >
         <div className="absolute inset-0 bg-gray-800 opacity-80"></div>
         <div className="relative z-10 max-w-4xl text-center px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">{clientConfig.heroText}</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold font-LemonMilk mb-4">{clientConfig.heroText}</h1>
           <p className="text-lg md:text-xl text-gray-300 mb-6">
             {clientConfig.heroSubText}
           </p>
           <button
             onClick={scrollToContact}
-            className="btn btn-md bg-primary border-primary text-sm md:text-base"
+            className="btn btn-lg bg-primary border-primary text-lg"
           >
             Give Us A Call
           </button>
@@ -77,7 +77,7 @@ function App() {
         xl:px-28   /* 10rem on ≥1280px */
         2xl:px-48 
         py-16 bg-[#171716] text-base-content border-t-[2px] border-primary">
-        <h2 className="text-4xl font-bold text-base-100 text-center mb-12">What We Offer</h2>
+        <h2 className="text-3xl font-bold font-LemonMilk text-base-100 text-center mb-12">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
           {[
             {
@@ -126,7 +126,7 @@ function App() {
       <section
         ref={contactRef}
         className="px-6 sm:px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-48 py-16 bg-[#171716] text-base-100">
-        <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
+        <h2 className="text-3xl font-bold font-LemonMilk text-center mb-12">Contact Us</h2>
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           <div className="w-full lg:w-1/2">
             <iframe
@@ -143,7 +143,7 @@ function App() {
             <div>
               <h3 className="text-xl font-bold">AMR Auto Repair</h3>
               <div className="flex items-center mt-2">
-                <MapPin size={24} color="#FDC700" />
+                <MapPin size={24} color={clientConfig.colors.logoColor} />
                 <a href={mapLink} className="ml-2 underline">
                   {clientConfig.location.address}
                   <br />
@@ -151,28 +151,32 @@ function App() {
                 </a>
               </div>
               <div className="flex items-center mt-3">
-                <Phone size={24} color="#FDC700" />
+                <Phone size={24} color={clientConfig.colors.logoColor} />
                 <a href={`tel:+1${clientConfig.phoneLink}`} className="ml-2 hover:text-primary">
                   {clientConfig.phone}
                 </a>
               </div>
               <div className="flex items-center mt-3">
-                <Mail size={24} color="#FDC700" />
+                <Mail size={24} color={clientConfig.colors.logoColor} />
                 <a href={`mailto:${clientConfig.email}`} className="ml-2 hover:text-primary">
                   {clientConfig.email}
                 </a>
               </div>
             </div>
 
-            <div>
+            <div className="w-56">
               <h4 className="text-xl font-bold">Hours of Operation</h4>
-              <p className="mt-2">Monday – Friday: 7am – 8pm</p>
-              <p>Saturday: 7am – 5pm</p>
-              <p>Sunday: Closed</p>
+              <span className="flex justify-between mt-3">Monday:<span>8 AM - 6 PM</span></span>
+              <span className="flex justify-between ">Tuesday:<span>8 AM - 6 PM</span></span>
+              <span className="flex justify-between ">Wednesday:<span>8 AM - 6 PM</span></span>
+              <span className="flex justify-between ">Thursday:<span>8 AM - 6 PM</span></span>
+              <span className="flex justify-between ">Friday:<span>8 AM - 6 PM</span></span>
+              <span className="flex justify-between ">Saturday:<span>9 AM - 4 PM</span></span>
+              <span className="flex justify-between ">Sunday:<span>Closed</span></span>
             </div>
           </div>
 
-          
+
         </div>
 
       </section>

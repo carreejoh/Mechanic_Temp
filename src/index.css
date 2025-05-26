@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 /* Logo Font */
-/* @font-face {
-    font-family: 'Gabarito';
-    src: url('/Gabarito-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/LEMONMILK-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('/LEMONMILK-Medium.otf') format('opentype');
+    font-weight: medium;
+    font-style: medium;
+}
 
 @theme {
-    --font-Gabarito: Gabarito, sans-serif;
+    --font-LemonMilk: LemonMilk, sans-serif;
     /* --font-sans: BrandonGrotesque, sans-serif */
 }
 
