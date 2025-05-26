@@ -1,14 +1,31 @@
 import { Phone, MapPin, Mail } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 
 function App() {
 
+  const homeRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const serviceRef = useRef<HTMLDivElement>(null);
 
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash === "") { scrollToHome() }
+    if (location.hash === "#services") { scrollToService() }
+    if (location.hash === "#contact") { scrollToContact() }
+  }, [location])
+
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToService = () => {
+    serviceRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
 
@@ -18,6 +35,7 @@ function App() {
 
       {/* Hero Section */}
       <section
+        ref={homeRef}
         className="relative flex items-center justify-center h-[90vh] bg-gray-800 text-white bg-cover bg-center
          px-6
       sm:px-6    /* 1.5rem on ≥640px */
@@ -43,7 +61,9 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section className="
+      <section
+        ref={serviceRef}
+        className="
       px-6
       sm:px-6    /* 1.5rem on ≥640px */
       md:px-8    /* 2rem on ≥768px */

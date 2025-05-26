@@ -36,3 +36,7 @@
     /* Main content color */
     /* --color-base-100: rgb(255, 255, 255); */
 }
+
+html {
+  scroll-padding-top: 6rem; /* match your header height */
+}
