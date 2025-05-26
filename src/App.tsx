@@ -127,7 +127,7 @@ function App() {
         ref={contactRef}
         className="px-6 sm:px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-48 py-16 bg-[#171716] text-base-100">
         <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
-        <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
+        <div className="flex flex-col lg:flex-row gap-10 items-start">
           <div className="w-full lg:w-1/2">
             <iframe
               src={clientConfig.location.googleMapEmbedLink}
@@ -135,19 +135,20 @@ function App() {
               height="350"
               loading="lazy"
               className="rounded-sm"
-              referrerPolicy="no-referrer-when-downgrade">
-
-            </iframe>
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
-          <div className="w-full flex lg:w-1/2 gap-2">
+          {/* Left: Info block (appears on top in mobile) */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-6">
             <div>
-              <h3 className="text-lg font-bold">AMR Auto Repair</h3>
-              <div className="flex items-center">
-                <MapPin
-                  size={24}
-                  color="#FDC700"
-                />
-                <a href={mapLink} className="mt-2 ml-2 underline">{clientConfig.location.address}<br></br>{clientConfig.location.addressSecondary}</a>
+              <h3 className="text-xl font-bold">AMR Auto Repair</h3>
+              <div className="flex items-center mt-2">
+                <MapPin size={24} color="#FDC700" />
+                <a href={mapLink} className="ml-2 underline">
+                  {clientConfig.location.address}
+                  <br />
+                  {clientConfig.location.addressSecondary}
+                </a>
               </div>
               <div className="flex items-center mt-3">
                 <Phone size={24} color="#FDC700" />
@@ -162,18 +163,18 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="ml-10">
-              <h4 className="text-lg font-bold">Hours of Operation</h4>
+
+            <div>
+              <h4 className="text-xl font-bold">Hours of Operation</h4>
               <p className="mt-2">Monday – Friday: 7am – 8pm</p>
               <p>Saturday: 7am – 5pm</p>
               <p>Sunday: Closed</p>
-              {/* <div className="flex gap-4 mt-4">
-                <a href="#" className="text-base-100 hover:text-primary"><i className="fab fa-facebook"></i> Facebook</a>
-                <a href="#" className="text-base-100 hover:text-primary"><i className="fab fa-twitter"></i> Twitter</a>
-              </div> */}
             </div>
           </div>
+
+          
         </div>
+
       </section>
 
       <footer className="px-8 py-6 h-16 bg-[#272627] text-neutral-content text-sm text-center">
