@@ -33,7 +33,7 @@ function App() {
           <p className="text-lg md:text-xl text-gray-300 mb-6">
             Honest, skilled mechanics serving Salt Lake City and beyond. We keep you running smoothly.
           </p>
-           <button
+          <button
             onClick={scrollToContact}
             className="btn btn-md bg-yellow-400 border-yellow-400 text-sm md:text-base"
           >
@@ -103,12 +103,12 @@ function App() {
         <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
         <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start">
           <div className="w-full lg:w-1/2">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.7052202371249!2d-111.89263766984047!3d40.74396671929422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f53ab3a61df5%3A0x16439d32409dd44b!2sAction%20Mobile%20Repair!5e0!3m2!1sen!2sus!4v1748289559907!5m2!1sen!2sus" 
-            width="100%" 
-            height="350" 
-            loading="lazy" 
-            className="rounded-sm"
-            referrerPolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.7052202371249!2d-111.89263766984047!3d40.74396671929422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f53ab3a61df5%3A0x16439d32409dd44b!2sAction%20Mobile%20Repair!5e0!3m2!1sen!2sus!4v1748289559907!5m2!1sen!2sus"
+              width="100%"
+              height="350"
+              loading="lazy"
+              className="rounded-sm"
+              referrerPolicy="no-referrer-when-downgrade">
 
             </iframe>
           </div>
@@ -123,17 +123,16 @@ function App() {
                 <a href="https://www.google.com/maps/place/Action+Mobile+Repair/@40.7439955,-111.8925289,117m/data=!3m1!1e3!4m14!1m7!3m6!1s0x8752f53ab3a61df5:0x16439d32409dd44b!2sAction+Mobile+Repair!8m2!3d40.7439845!4d-111.892386!16s%2Fg%2F1tfbj64m!3m5!1s0x8752f53ab3a61df5:0x16439d32409dd44b!8m2!3d40.7439845!4d-111.892386!16s%2Fg%2F1tfbj64m?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" className="mt-2 ml-2 underline">1145 Richards St, <br></br>Salt Lake City, UT 84101</a>
               </div>
               <div className="flex items-center mt-3">
-                <Phone
-                  size={24}
-                  color="#FDC700"
-                />
-                <p className="ml-2"> (801) 555-1234</p>
+                <Phone size={24} color="#FDC700" />
+                <a href="tel:+18015551234" className="ml-2 hover:text-yellow-400">
+                  (801) 555-1234
+                </a>
               </div>
               <div className="flex items-center mt-3">
-                <Mail size={24}
-                  color="#FDC700"
-                />
-                <p className="ml-2">AMR_Auto@gmail.com</p>
+                <Mail size={24} color="#FDC700" />
+                <a href="mailto:AMR_Auto@gmail.com" className="ml-2 hover:text-yellow-400">
+                  AMR_Auto@gmail.com
+                </a>
               </div>
             </div>
             <div className="ml-10">
